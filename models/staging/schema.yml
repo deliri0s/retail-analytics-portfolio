@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_suppliers
+    description: "Staged supplier data with declared product dimensions and calculated volume"
+    columns:
+      - name: supplier_id
+        description: "Unique supplier identifier"
+      - name: product_id
+        description: "Product identifier"
+      - name: declared_volume_cm3
+        description: "Volume calculated from supplier declared dimensions"
+
+  - name: stg_itemfile
+    description: "Staged itemfile data with product specs registered by the itemfile team"
+    columns:
+      - name: product_id
+        description: "Product identifier"
+      - name: itemfile_volume_cm3
+        description: "Volume calculated from itemfile registered dimensions"
+
+  - name: stg_modulares
+    description: "Staged modulares data with real shelf dimensions measured in store"
+    columns:
+      - name: product_id
+        description: "Product identifier"
+      - name: real_volume_cm3
+        description: "Volume calculated from real shelf measurements"

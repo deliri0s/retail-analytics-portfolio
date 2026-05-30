@@ -1,0 +1,9 @@
+supplier_id,supplier_name,product_id,declared_height_cm,declared_width_cm,declared_depth_cm
+S001,Unilever,P001,25.0,10.0,8.0
+S002,Nestle,P002,30.0,12.0,10.0
+S003,PG,P003,20.0,8.0,6.0
+S004,Colgate,P004,18.0,5.0,4.0
+S005,Unilever,P005,35.0,15.0,12.0
+S006,Nestle,P006,22.0,9.0,7.0
+S007,PG,P007,28.0,11.0,9.0
+S008,Colgate,P008,15.0,6.0,5.0

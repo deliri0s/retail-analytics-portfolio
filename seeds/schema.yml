@@ -1,0 +1,21 @@
+version: 2
+
+seeds:
+  - name: suppliers
+    config:
+      column_types:
+        declared_height_cm: float64
+        declared_width_cm: float64
+        declared_depth_cm: float64
+  - name: itemfile
+    config:
+      column_types:
+        itemfile_height_cm: float64
+        itemfile_width_cm: float64
+        itemfile_depth_cm: float64
+  - name: modulares
+    config:
+      column_types:
+        real_height_cm: float64
+        real_width_cm: float64
+        real_depth_cm: float64

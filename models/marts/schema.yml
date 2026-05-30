@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_product_dimensions
+    description: "Single source of truth — unifies supplier, itemfile and modulares dimensions to identify volume gaps per product"
+    columns:
+      - name: product_id
+        description: "Product identifier"
+      - name: volume_gap_cm3
+        description: "Difference between real and declared volume in cm3"
+      - name: volume_gap_pct
+        description: "Volume gap as a percentage of declared volume"

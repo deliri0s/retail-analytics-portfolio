@@ -1,0 +1,9 @@
+product_id,product_name,category,itemfile_height_cm,itemfile_width_cm,itemfile_depth_cm,created_date
+P001,Shampoo 400ml,Personal Care,24.0,9.5,7.5,2023-01-15
+P002,Chocolate Box,Food,29.0,11.5,9.5,2023-01-20
+P003,Detergent 1L,Cleaning,21.0,8.5,6.5,2023-02-01
+P004,Toothpaste 100ml,Personal Care,17.5,5.5,4.5,2023-02-10
+P005,Conditioner 400ml,Personal Care,34.0,14.5,11.5,2023-02-15
+P006,Coffee 500g,Food,23.0,9.0,7.0,2023-03-01
+P007,Fabric Softener,Cleaning,27.0,10.5,8.5,2023-03-10
+P008,Toothbrush,Personal Care,16.0,6.5,5.5,2023-03-15
