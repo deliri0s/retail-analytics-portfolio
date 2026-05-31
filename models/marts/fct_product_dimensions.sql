@@ -59,23 +59,29 @@ alerts as (
 
         -- Alert: Mod vs Supplier
         case
-            when abs(pct_mod_supp) > 10 then 'HIGH'
-            when abs(pct_mod_supp) >= 6  then 'MEDIUM'
-            else 'LOW'
+            when pct_mod_supp > 10  then 'HIGH_OVER'
+            when pct_mod_supp < -10 then 'HIGH_UNDER'
+            when pct_mod_supp >= 6  then 'MEDIUM_OVER'
+            when pct_mod_supp <= -6 then 'MEDIUM_UNDER'
+            else 'OK'
         end as alert_mod_supp,
 
         -- Alert: Mod vs Itemfile
         case
-            when abs(pct_mod_if) > 10 then 'HIGH'
-            when abs(pct_mod_if) >= 6  then 'MEDIUM'
-            else 'LOW'
+            when pct_mod_if > 10  then 'HIGH_OVER'
+            when pct_mod_if < -10 then 'HIGH_UNDER'
+            when pct_mod_if >= 6  then 'MEDIUM_OVER'
+            when pct_mod_if <= -6 then 'MEDIUM_UNDER'
+            else 'OK'
         end as alert_mod_if,
 
         -- Alert: Itemfile vs Supplier
         case
-            when abs(pct_if_supp) > 10 then 'HIGH'
-            when abs(pct_if_supp) >= 6  then 'MEDIUM'
-            else 'LOW'
+            when pct_if_supp > 10  then 'HIGH_OVER'
+            when pct_if_supp < -10 then 'HIGH_UNDER'
+            when pct_if_supp >= 6  then 'MEDIUM_OVER'
+            when pct_if_supp <= -6 then 'MEDIUM_UNDER'
+            else 'OK'
         end as alert_if_supp
 
     from joined
