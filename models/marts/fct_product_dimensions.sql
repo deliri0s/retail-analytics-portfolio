@@ -17,7 +17,6 @@ joined as (
         i.category,
         s.supplier_name,
 
-        -- Dimensions
         s.declared_height_cm,
         s.declared_width_cm,
         s.declared_depth_cm,
@@ -36,15 +35,12 @@ joined as (
         m.shelf_id,
         m.store_id,
 
-        -- Gap 1: Mod vs Supplier
         round(m.real_volume_cm3 - s.declared_volume_cm3, 2) as dif_mod_supp,
         round((m.real_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2) as pct_mod_supp,
 
-        -- Gap 2: Mod vs Itemfile
         round(m.real_volume_cm3 - i.itemfile_volume_cm3, 2) as dif_mod_if,
         round((m.real_volume_cm3 - i.itemfile_volume_cm3) / i.itemfile_volume_cm3 * 100, 2) as pct_mod_if,
 
-        -- Gap 3: Itemfile vs Supplier
         round(i.itemfile_volume_cm3 - s.declared_volume_cm3, 2) as dif_if_supp,
         round((i.itemfile_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2) as pct_if_supp
 
@@ -57,30 +53,27 @@ alerts as (
     select
         *,
 
-        -- Alert: Mod vs Supplier
         case
-            when pct_mod_supp > 10  then 'HIGH_OVER'
-            when pct_mod_supp < -10 then 'HIGH_UNDER'
-            when pct_mod_supp >= 6  then 'MEDIUM_OVER'
-            when pct_mod_supp <= -6 then 'MEDIUM_UNDER'
+            when pct_mod_supp > 10  then 'HIGH_O'
+            when pct_mod_supp < -10 then 'HIGH_U'
+            when pct_mod_supp >= 6  then 'MED_O'
+            when pct_mod_supp <= -6 then 'MED_U'
             else 'OK'
         end as alert_mod_supp,
 
-        -- Alert: Mod vs Itemfile
         case
-            when pct_mod_if > 10  then 'HIGH_OVER'
-            when pct_mod_if < -10 then 'HIGH_UNDER'
-            when pct_mod_if >= 6  then 'MEDIUM_OVER'
-            when pct_mod_if <= -6 then 'MEDIUM_UNDER'
+            when pct_mod_if > 10  then 'HIGH_O'
+            when pct_mod_if < -10 then 'HIGH_U'
+            when pct_mod_if >= 6  then 'MED_O'
+            when pct_mod_if <= -6 then 'MED_U'
             else 'OK'
         end as alert_mod_if,
 
-        -- Alert: Itemfile vs Supplier
         case
-            when pct_if_supp > 10  then 'HIGH_OVER'
-            when pct_if_supp < -10 then 'HIGH_UNDER'
-            when pct_if_supp >= 6  then 'MEDIUM_OVER'
-            when pct_if_supp <= -6 then 'MEDIUM_UNDER'
+            when pct_if_supp > 10  then 'HIGH_O'
+            when pct_if_supp < -10 then 'HIGH_U'
+            when pct_if_supp >= 6  then 'MED_O'
+            when pct_if_supp <= -6 then 'MED_U'
             else 'OK'
         end as alert_if_supp
 
