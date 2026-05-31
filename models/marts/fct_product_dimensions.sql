@@ -36,21 +36,49 @@ joined as (
         m.shelf_id,
         m.store_id,
 
-        -- Gap 1: Reality vs System (Modulares vs Itemfile)
-        round(m.real_volume_cm3 - i.itemfile_volume_cm3, 2)                                    as gap_reality_vs_system_cm3,
-        round((m.real_volume_cm3 - i.itemfile_volume_cm3) / i.itemfile_volume_cm3 * 100, 2)   as gap_reality_vs_system_pct,
+        -- Gap 1: Mod vs Supplier
+        round(m.real_volume_cm3 - s.declared_volume_cm3, 2) as dif_mod_supp,
+        round((m.real_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2) as pct_mod_supp,
 
-        -- Gap 2: Reality vs Supplier (Modulares vs Suppliers)
-        round(m.real_volume_cm3 - s.declared_volume_cm3, 2)                                    as gap_reality_vs_supplier_cm3,
-        round((m.real_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2)   as gap_reality_vs_supplier_pct,
+        -- Gap 2: Mod vs Itemfile
+        round(m.real_volume_cm3 - i.itemfile_volume_cm3, 2) as dif_mod_if,
+        round((m.real_volume_cm3 - i.itemfile_volume_cm3) / i.itemfile_volume_cm3 * 100, 2) as pct_mod_if,
 
-        -- Gap 3: System vs Supplier (Itemfile vs Suppliers)
-        round(i.itemfile_volume_cm3 - s.declared_volume_cm3, 2)                                as gap_system_vs_supplier_cm3,
-        round((i.itemfile_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2) as gap_system_vs_supplier_pct
+        -- Gap 3: Itemfile vs Supplier
+        round(i.itemfile_volume_cm3 - s.declared_volume_cm3, 2) as dif_if_supp,
+        round((i.itemfile_volume_cm3 - s.declared_volume_cm3) / s.declared_volume_cm3 * 100, 2) as pct_if_supp
 
     from itemfile i
     left join suppliers s on i.product_id = s.product_id
     left join modulares m on i.product_id = m.product_id
+),
+
+alerts as (
+    select
+        *,
+
+        -- Alert: Mod vs Supplier
+        case
+            when abs(pct_mod_supp) > 10 then 'HIGH'
+            when abs(pct_mod_supp) >= 6  then 'MEDIUM'
+            else 'LOW'
+        end as alert_mod_supp,
+
+        -- Alert: Mod vs Itemfile
+        case
+            when abs(pct_mod_if) > 10 then 'HIGH'
+            when abs(pct_mod_if) >= 6  then 'MEDIUM'
+            else 'LOW'
+        end as alert_mod_if,
+
+        -- Alert: Itemfile vs Supplier
+        case
+            when abs(pct_if_supp) > 10 then 'HIGH'
+            when abs(pct_if_supp) >= 6  then 'MEDIUM'
+            else 'LOW'
+        end as alert_if_supp
+
+    from joined
 )
 
-select * from joined
+select * from alerts
