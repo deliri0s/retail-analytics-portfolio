@@ -1,9 +1,19 @@
 product_id,product_name,category,itemfile_height_cm,itemfile_width_cm,itemfile_depth_cm,created_date
-P001,Shampoo 400ml,Personal Care,24.0,9.5,7.5,2023-01-15
-P002,Chocolate Box,Food,29.0,11.5,9.5,2023-01-20
-P003,Detergent 1L,Cleaning,21.0,8.5,6.5,2023-02-01
-P004,Toothpaste 100ml,Personal Care,17.5,5.5,4.5,2023-02-10
-P005,Conditioner 400ml,Personal Care,34.0,14.5,11.5,2023-02-15
-P006,Coffee 500g,Food,23.0,9.0,7.0,2023-03-01
-P007,Fabric Softener,Cleaning,27.0,10.5,8.5,2023-03-10
-P008,Toothbrush,Personal Care,16.0,6.5,5.5,2023-03-15
+P001,Aceite Vegetal 1L,Oils,30.5,20.2,20.1,2023-01-10
+P002,Aceite Oliva 500ml,Oils,26.0,15.5,15.2,2023-01-10
+P003,Aceite Maravilla 900ml,Oils,29.0,18.5,18.2,2023-01-15
+P004,Galletas Vainilla,Biscuits,41.0,30.5,25.2,2023-02-01
+P005,Galletas Chocolate,Biscuits,36.0,25.5,20.3,2023-02-01
+P006,Crackers Salados,Biscuits,39.0,28.5,22.5,2023-02-10
+P007,Detergente Polvo 1kg,Detergents,46.0,35.5,30.2,2023-03-01
+P008,Detergente Liquido 2L,Detergents,43.0,32.5,28.5,2023-03-01
+P009,Quitamanchas 500ml,Detergents,41.0,30.5,25.5,2023-03-10
+P010,Fideos Spaghetti,Pasta,52.0,41.0,35.5,2023-04-01
+P011,Fideos Codo,Pasta,49.0,39.0,32.5,2023-04-01
+P012,Fideos Pluma,Pasta,46.0,36.0,30.5,2023-04-10
+P013,Aceite Vegetal 2L,Oils,36.0,25.5,20.5,2023-05-01
+P014,Galletas Integrales,Biscuits,33.0,22.5,18.5,2023-05-01
+P015,Detergente Polvo 3kg,Detergents,31.0,20.5,16.5,2023-05-10
+P016,Fideos Linguini,Pasta,43.0,32.5,28.5,2023-06-01
+P017,Aceite Maiz 1L,Oils,41.0,30.5,25.5,2023-06-01
+P018,Crackers Integrales,Biscuits,39.0,28.5,22.5,2023-06-10
