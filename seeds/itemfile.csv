@@ -4,43 +4,73 @@ P002,Aceite Oliva 500ml,Oils,29.2,21.4,18.4,2023-01-15,false
 P003,Aceite Maravilla 900ml,Oils,31.6,19.4,18.2,2023-01-15,false
 P004,Aceite Maiz 1L,Oils,30.8,23.4,19.6,2023-01-15,false
 P005,Aceite Canola 1L,Oils,27.5,19.3,18.4,2023-01-15,false
-P006,Galletas Vainilla,Biscuits,34.6,29.0,23.1,2023-01-15,false
-P007,Galletas Chocolate,Biscuits,40.8,26.1,24.9,2023-01-15,false
-P008,Crackers Salados,Biscuits,37.1,30.6,22.6,2023-01-15,false
-P009,Galletas Integrales,Biscuits,35.1,28.2,24.1,2023-01-15,false
-P010,Crackers Multigrano,Biscuits,39.8,32.3,25.7,2023-01-15,false
-P011,Detergente Polvo 1kg,Detergents,46.2,35.0,32.0,2023-01-15,false
-P012,Detergente Liquido 2L,Detergents,44.0,34.3,27.7,2023-01-15,false
-P013,Quitamanchas 500ml,Detergents,41.5,31.3,27.8,2023-01-15,false
-P014,Detergente Polvo 3kg,Detergents,48.3,31.8,28.4,2023-01-15,false
-P015,Suavizante 1L,Detergents,45.0,32.2,29.6,2023-01-15,false
-P016,Fideos Spaghetti,Pasta,54.2,38.5,32.2,2023-01-15,false
-P017,Fideos Codo,Pasta,55.4,41.5,33.0,2023-01-15,false
-P018,Fideos Pluma,Pasta,47.0,40.6,33.9,2023-01-15,false
-P019,Fideos Linguini,Pasta,48.3,39.6,35.2,2023-01-15,false
-P020,Fideos Tallarin,Pasta,55.4,39.1,34.4,2023-01-15,false
-P021,Galletas Choco Chip,Cookies,27.7,24.5,20.0,2023-01-15,true
-P022,Galletas Mantequilla,Cookies,32.0,21.0,19.5,2023-01-15,false
-P023,Galletas Limon,Cookies,31.3,21.9,20.3,2023-01-15,true
-P024,Galletas Surtidas,Cookies,25.8,23.6,16.7,2023-01-15,false
-P025,Galletas Rellenas Vainilla,Cookies,28.9,20.2,18.3,2023-01-15,true
-P026,Galletas Rellenas Choco,Cookies,29.4,22.8,20.1,2023-01-15,false
-P027,Galletas Sandwich,Cookies,31.4,21.3,17.7,2023-01-15,true
-P028,Aceite Girasol 900ml,Oils,26.3,20.9,21.2,2023-01-15,false
-P029,Aceite Oliva Extra 750ml,Oils,27.2,18.6,22.5,2023-01-15,false
-P030,Galletas Avena,Biscuits,42.0,31.7,25.9,2023-01-15,false
-P031,Crackers Queso,Biscuits,43.7,28.2,22.5,2023-01-15,false
-P032,Detergente Ropa Color 2L,Detergents,46.5,32.2,26.5,2023-01-15,false
-P033,Detergente Bebe 1L,Detergents,47.0,32.1,25.9,2023-01-15,false
-P034,Fideos Integral,Pasta,56.5,41.4,36.8,2023-01-15,false
-P035,Fideos Caracol,Pasta,51.2,37.7,33.0,2023-01-15,false
-P036,Galletas Festival,Cookies,30.6,24.4,19.3,2023-01-15,false
-P037,Galletas Wafer,Cookies,29.4,21.3,18.9,2023-01-15,true
-P038,Galletas Premium,Cookies,28.0,24.9,17.4,2023-01-15,false
-P039,Aceite Mixto 1L,Oils,33.8,19.2,18.6,2023-01-15,false
-P040,Blanqueador 1L,Detergents,43.4,32.2,31.8,2023-01-15,false
-P041,Detergents Generico 42,Detergents,45.2,32.6,30.1,2023-01-15,false
-P042,Fideos Tornillo,Pasta,55.9,41.2,36.4,2023-01-15,false
-P043,Cookies Generico 44,Cookies,31.5,23.2,20.4,2023-01-15,true
-P044,Cookies Generico 45,Cookies,28.1,23.9,17.0,2023-01-15,false
-P045,Galletas Coco,Biscuits,39.3,30.1,23.7,2023-01-15,false
+P006,Aceite Girasol 900ml,Oils,26.9,21.2,20.1,2023-01-15,false
+P007,Aceite Oliva Extra 750ml,Oils,32.8,18.2,21.9,2023-01-15,false
+P008,Galletas Vainilla,Biscuits,37.1,30.6,22.6,2023-01-15,false
+P009,Galletas Chocolate,Biscuits,35.1,28.2,24.1,2023-01-15,false
+P010,Crackers Salados,Biscuits,39.8,32.3,25.7,2023-01-15,false
+P011,Galletas Integrales,Biscuits,40.0,29.8,26.8,2023-01-15,false
+P012,Crackers Multigrano,Biscuits,37.8,29.1,22.5,2023-01-15,false
+P013,Galletas Avena,Biscuits,35.7,26.5,23.0,2023-01-15,false
+P014,Crackers Queso,Biscuits,42.3,26.8,23.5,2023-01-15,false
+P015,Galletas Coco,Biscuits,39.2,27.3,24.7,2023-01-15,false
+P016,Crackers Centeno,Biscuits,41.9,27.2,21.9,2023-01-15,false
+P017,Galletas Miel,Biscuits,43.1,30.2,22.7,2023-01-15,false
+P018,Detergente Polvo 1kg,Detergents,41.1,34.6,29.0,2023-01-15,false
+P019,Detergente Liquido 2L,Detergents,42.3,33.6,30.3,2023-01-15,false
+P020,Quitamanchas 500ml,Detergents,49.2,32.9,29.2,2023-01-15,false
+P021,Detergente Polvo 3kg,Detergents,43.9,35.7,30.1,2023-01-15,false
+P022,Suavizante 1L,Detergents,48.6,32.4,29.9,2023-01-15,false
+P023,Detergente Ropa Color 2L,Detergents,46.9,32.7,30.1,2023-01-15,false
+P024,Detergente Bebe 1L,Detergents,41.3,34.3,26.4,2023-01-15,false
+P025,Blanqueador 1L,Detergents,44.6,31.0,28.2,2023-01-15,false
+P026,Fideos Spaghetti,Pasta,50.5,39.1,34.5,2023-01-15,false
+P027,Fideos Codo,Pasta,53.8,38.6,33.0,2023-01-15,false
+P028,Fideos Pluma,Pasta,45.5,39.2,33.7,2023-01-15,false
+P029,Fideos Linguini,Pasta,47.3,37.6,35.5,2023-01-15,false
+P030,Fideos Tallarin,Pasta,54.2,42.8,36.0,2023-01-15,false
+P031,Fideos Integral,Pasta,56.1,39.6,32.8,2023-01-15,false
+P032,Fideos Caracol,Pasta,52.4,38.1,31.5,2023-01-15,false
+P033,Galletas Choco Chip,Cookies,31.1,21.2,16.0,2023-01-15,true
+P034,Galletas Mantequilla,Cookies,33.8,23.9,21.3,2023-01-15,false
+P035,Galletas Limon,Cookies,29.9,21.2,18.4,2023-01-15,true
+P036,Galletas Surtidas,Cookies,30.6,24.4,19.3,2023-01-15,false
+P037,Galletas Rellenas Vainilla,Cookies,29.4,21.3,18.9,2023-01-15,true
+P038,Galletas Rellenas Choco,Cookies,28.0,24.9,17.4,2023-01-15,false
+P039,Galletas Sandwich,Cookies,31.8,21.3,16.6,2023-01-15,true
+P040,Galletas Festival,Cookies,26.9,20.9,21.5,2023-01-15,false
+P041,Galletas Wafer,Cookies,28.8,21.4,19.8,2023-01-15,true
+P042,Galletas Premium,Cookies,33.0,23.6,20.8,2023-01-15,false
+P043,Galletas Doble Choco,Cookies,31.5,23.2,20.4,2023-01-15,true
+P044,Galletas Avellana,Cookies,28.1,23.9,17.0,2023-01-15,false
+P045,Cookies Generico 46,Cookies,29.1,23.9,18.6,2023-01-15,true
+P046,Aceite Mixto 1L,Oils,30.8,18.5,20.4,2023-01-15,false
+P047,Aceite Soya 1L,Oils,29.7,21.3,20.3,2023-01-15,false
+P048,Aceite Palta 500ml,Oils,31.5,18.0,19.6,2023-01-15,false
+P049,Crackers Sesamo,Biscuits,40.9,30.9,22.2,2023-01-15,false
+P050,Galletas Canela,Biscuits,41.4,32.0,22.2,2023-01-15,false
+P051,Biscuits Generico 52,Biscuits,42.0,27.6,24.5,2023-01-15,false
+P052,Biscuits Generico 53,Biscuits,43.0,28.6,24.8,2023-01-15,false
+P053,Detergente Concentrado 1L,Detergents,49.5,36.2,28.1,2023-01-15,false
+P054,Suavizante Premium 2L,Detergents,48.4,34.6,29.9,2023-01-15,false
+P055,Detergents Generico 56,Detergents,44.9,32.3,26.7,2023-01-15,false
+P056,Fideos Tornillo,Pasta,53.1,37.6,31.7,2023-01-15,false
+P057,Fideos Cabello Angel,Pasta,51.2,38.2,33.3,2023-01-15,false
+P058,Fideos Fetuccini,Pasta,50.1,39.7,32.7,2023-01-15,false
+P059,Cookies Generico 60,Cookies,29.9,25.1,17.2,2023-01-15,true
+P060,Cookies Generico 61,Cookies,27.0,21.8,17.2,2023-01-15,false
+P061,Cookies Generico 62,Cookies,31.3,22.5,20.0,2023-01-15,true
+P062,Cookies Generico 63,Cookies,30.7,21.8,15.9,2023-01-15,false
+P063,Cookies Generico 64,Cookies,29.4,24.3,17.6,2023-01-15,true
+P064,Cookies Generico 65,Cookies,26.1,20.9,18.9,2023-01-15,false
+P065,Cookies Generico 66,Cookies,27.7,22.0,20.6,2023-01-15,true
+P066,Aceite Coco 400ml,Oils,30.3,21.1,21.7,2023-01-15,false
+P067,Detergents Generico 68,Detergents,44.7,32.8,28.0,2023-01-15,false
+P068,Detergents Generico 69,Detergents,41.5,32.6,29.6,2023-01-15,false
+P069,Detergents Generico 70,Detergents,46.6,36.3,31.8,2023-01-15,false
+P070,Pasta Generico 71,Pasta,51.5,41.4,32.0,2023-01-15,false
+P071,Pasta Generico 72,Pasta,55.5,39.9,34.0,2023-01-15,false
+P072,Cookies Generico 73,Cookies,30.9,21.1,18.6,2023-01-15,false
+P073,Cookies Generico 74,Cookies,29.3,23.2,16.4,2023-01-15,true
+P074,Cookies Generico 75,Cookies,28.4,23.0,18.5,2023-01-15,false
+P075,Biscuits Generico 76,Biscuits,40.4,30.5,22.3,2023-01-15,false

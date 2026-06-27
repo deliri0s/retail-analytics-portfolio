@@ -14,7 +14,7 @@ replenishment as (
         -- Pre-sliced boxes cut replenishment time in half (less manual sorting)
         round(
             (((100.0 / g.shelf_capacity_units) - (100.0 / s.units_per_box)) * 5)
-            * (case when g.is_pre_sliced = 'true' then 0.5 else 1.0 end)
+            * (case when g.is_pre_sliced = true then 0.5 else 1.0 end)
         , 1) as extra_minutes_per_day,
         case
             when g.alert_mod_supp = 'HIGH_O' then 'Efficiency loss — more replenishments needed'
