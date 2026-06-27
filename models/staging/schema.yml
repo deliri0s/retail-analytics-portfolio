@@ -2,27 +2,69 @@ version: 2
 
 models:
   - name: stg_suppliers
-    description: "Staged supplier data with declared product dimensions and calculated volume"
+    description: "Staged supplier data with declared product dimensions and units per box"
     columns:
       - name: supplier_id
-        description: "Unique supplier identifier"
+        description: "Unique supplier-product identifier"
+        tests:
+          - unique
+          - not_null
       - name: product_id
         description: "Product identifier"
+        tests:
+          - not_null
+      - name: supplier_name
+        description: "Supplier name (fictional)"
+        tests:
+          - not_null
       - name: declared_volume_cm3
         description: "Volume calculated from supplier declared dimensions"
+        tests:
+          - not_null
+      - name: units_per_box
+        description: "Number of units the supplier declares fit per box"
+        tests:
+          - not_null
 
   - name: stg_itemfile
     description: "Staged itemfile data with product specs registered by the itemfile team"
     columns:
       - name: product_id
         description: "Product identifier"
+        tests:
+          - unique
+          - not_null
+      - name: category
+        description: "Product category"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Oils', 'Biscuits', 'Detergents', 'Pasta', 'Cookies']
       - name: itemfile_volume_cm3
         description: "Volume calculated from itemfile registered dimensions"
+        tests:
+          - not_null
+      - name: is_pre_sliced
+        description: "Whether the box comes pre-sliced for faster replenishment (Cookies only)"
 
   - name: stg_modulares
     description: "Staged modulares data with real shelf dimensions measured in store"
     columns:
       - name: product_id
         description: "Product identifier"
+        tests:
+          - not_null
+      - name: store_id
+        description: "Store identifier"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ST001', 'ST002', 'ST003', 'ST004', 'ST005']
       - name: real_volume_cm3
         description: "Volume calculated from real shelf measurements"
+        tests:
+          - not_null
+      - name: shelf_capacity_units
+        description: "Real units that fit on the shelf given actual dimensions"
+        tests:
+          - not_null

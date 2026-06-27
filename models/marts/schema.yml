@@ -1,12 +1,77 @@
 version: 2
 
 models:
-  - name: fct_product_dimensions
-    description: "Single source of truth — unifies supplier, itemfile and modulares dimensions to identify volume gaps per product"
+  - name: fct_dimension_gaps
+    description: "Single source of truth — unifies supplier, itemfile and modulares dimensions across 5 stores and 3 monthly snapshots to identify volume gaps and classify directional alerts"
     columns:
       - name: product_id
         description: "Product identifier"
-      - name: volume_gap_cm3
-        description: "Difference between real and declared volume in cm3"
-      - name: volume_gap_pct
-        description: "Volume gap as a percentage of declared volume"
+        tests:
+          - not_null
+      - name: alert_mod_supp
+        description: "Directional alert classification for Modulares vs Supplier gap"
+        tests:
+          - accepted_values:
+              values: ['HIGH_O', 'HIGH_U', 'MED_O', 'MED_U', 'OK']
+      - name: alert_mod_if
+        description: "Directional alert classification for Modulares vs Itemfile gap"
+        tests:
+          - accepted_values:
+              values: ['HIGH_O', 'HIGH_U', 'MED_O', 'MED_U', 'OK']
+      - name: alert_if_supp
+        description: "Directional alert classification for Itemfile vs Supplier gap"
+        tests:
+          - accepted_values:
+              values: ['HIGH_O', 'HIGH_U', 'MED_O', 'MED_U', 'OK']
+      - name: pct_mod_supp
+        description: "Percentage gap between real shelf volume and supplier declared volume"
+        tests:
+          - not_null
+
+  - name: fct_replenishment
+    description: "Replenishment efficiency model — quantifies the operational time impact of dimension gaps, factoring in pre-sliced packaging for Cookies"
+    columns:
+      - name: product_id
+        description: "Product identifier"
+        tests:
+          - not_null
+      - name: extra_minutes_per_day
+        description: "Estimated extra replenishment minutes per day caused by the dimension gap"
+      - name: replenishment_impact
+        description: "Business-readable classification of the operational impact"
+        tests:
+          - accepted_values:
+              values:
+                - 'Efficiency loss — more replenishments needed'
+                - 'Planogram risk — shelf space wasted'
+                - 'Monitor — moderate impact'
+                - 'No impact'
+
+  - name: fct_supplier_score
+    description: "Weighted reliability score per supplier (0-100), combining all 3 gap metrics to prioritize buyer action"
+    columns:
+      - name: supplier_name
+        description: "Supplier name (fictional)"
+        tests:
+          - unique
+          - not_null
+      - name: reliability_score
+        description: "Weighted reliability score from 0 (worst) to 100 (best)"
+        tests:
+          - not_null
+      - name: buyer_action
+        description: "Recommended action for the procurement team based on alert volume"
+        tests:
+          - not_null
+
+  - name: fct_store_performance
+    description: "Store-level comparison of dimension gap impact, including a pilot store with corrected supplier dimensions as a control group"
+    columns:
+      - name: store_id
+        description: "Store identifier"
+        tests:
+          - not_null
+      - name: is_pilot_store
+        description: "Whether this store uses corrected supplier dimensions (control group)"
+        tests:
+          - not_null
