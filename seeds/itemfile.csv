@@ -1,19 +1,46 @@
-product_id,product_name,category,itemfile_height_cm,itemfile_width_cm,itemfile_depth_cm,created_date
-P001,Aceite Vegetal 1L,Oils,30.5,20.2,20.1,2023-01-10
-P002,Aceite Oliva 500ml,Oils,26.0,15.5,15.2,2023-01-10
-P003,Aceite Maravilla 900ml,Oils,29.0,18.5,18.2,2023-01-15
-P004,Galletas Vainilla,Biscuits,41.0,30.5,25.2,2023-02-01
-P005,Galletas Chocolate,Biscuits,36.0,25.5,20.3,2023-02-01
-P006,Crackers Salados,Biscuits,39.0,28.5,22.5,2023-02-10
-P007,Detergente Polvo 1kg,Detergents,46.0,35.5,30.2,2023-03-01
-P008,Detergente Liquido 2L,Detergents,43.0,32.5,28.5,2023-03-01
-P009,Quitamanchas 500ml,Detergents,41.0,30.5,25.5,2023-03-10
-P010,Fideos Spaghetti,Pasta,52.0,41.0,35.5,2023-04-01
-P011,Fideos Codo,Pasta,49.0,39.0,32.5,2023-04-01
-P012,Fideos Pluma,Pasta,46.0,36.0,30.5,2023-04-10
-P013,Aceite Vegetal 2L,Oils,36.0,25.5,20.5,2023-05-01
-P014,Galletas Integrales,Biscuits,33.0,22.5,18.5,2023-05-01
-P015,Detergente Polvo 3kg,Detergents,31.0,20.5,16.5,2023-05-10
-P016,Fideos Linguini,Pasta,43.0,32.5,28.5,2023-06-01
-P017,Aceite Maiz 1L,Oils,41.0,30.5,25.5,2023-06-01
-P018,Crackers Integrales,Biscuits,39.0,28.5,22.5,2023-06-10
+product_id,product_name,category,itemfile_height_cm,itemfile_width_cm,itemfile_depth_cm,created_date,is_pre_sliced
+P001,Aceite Vegetal 1L,Oils,31.2,17.7,18.8,2023-01-15,false
+P002,Aceite Oliva 500ml,Oils,29.2,21.4,18.4,2023-01-15,false
+P003,Aceite Maravilla 900ml,Oils,31.6,19.4,18.2,2023-01-15,false
+P004,Aceite Maiz 1L,Oils,30.8,23.4,19.6,2023-01-15,false
+P005,Aceite Canola 1L,Oils,27.5,19.3,18.4,2023-01-15,false
+P006,Galletas Vainilla,Biscuits,34.6,29.0,23.1,2023-01-15,false
+P007,Galletas Chocolate,Biscuits,40.8,26.1,24.9,2023-01-15,false
+P008,Crackers Salados,Biscuits,37.1,30.6,22.6,2023-01-15,false
+P009,Galletas Integrales,Biscuits,35.1,28.2,24.1,2023-01-15,false
+P010,Crackers Multigrano,Biscuits,39.8,32.3,25.7,2023-01-15,false
+P011,Detergente Polvo 1kg,Detergents,46.2,35.0,32.0,2023-01-15,false
+P012,Detergente Liquido 2L,Detergents,44.0,34.3,27.7,2023-01-15,false
+P013,Quitamanchas 500ml,Detergents,41.5,31.3,27.8,2023-01-15,false
+P014,Detergente Polvo 3kg,Detergents,48.3,31.8,28.4,2023-01-15,false
+P015,Suavizante 1L,Detergents,45.0,32.2,29.6,2023-01-15,false
+P016,Fideos Spaghetti,Pasta,54.2,38.5,32.2,2023-01-15,false
+P017,Fideos Codo,Pasta,55.4,41.5,33.0,2023-01-15,false
+P018,Fideos Pluma,Pasta,47.0,40.6,33.9,2023-01-15,false
+P019,Fideos Linguini,Pasta,48.3,39.6,35.2,2023-01-15,false
+P020,Fideos Tallarin,Pasta,55.4,39.1,34.4,2023-01-15,false
+P021,Galletas Choco Chip,Cookies,27.7,24.5,20.0,2023-01-15,true
+P022,Galletas Mantequilla,Cookies,32.0,21.0,19.5,2023-01-15,false
+P023,Galletas Limon,Cookies,31.3,21.9,20.3,2023-01-15,true
+P024,Galletas Surtidas,Cookies,25.8,23.6,16.7,2023-01-15,false
+P025,Galletas Rellenas Vainilla,Cookies,28.9,20.2,18.3,2023-01-15,true
+P026,Galletas Rellenas Choco,Cookies,29.4,22.8,20.1,2023-01-15,false
+P027,Galletas Sandwich,Cookies,31.4,21.3,17.7,2023-01-15,true
+P028,Aceite Girasol 900ml,Oils,26.3,20.9,21.2,2023-01-15,false
+P029,Aceite Oliva Extra 750ml,Oils,27.2,18.6,22.5,2023-01-15,false
+P030,Galletas Avena,Biscuits,42.0,31.7,25.9,2023-01-15,false
+P031,Crackers Queso,Biscuits,43.7,28.2,22.5,2023-01-15,false
+P032,Detergente Ropa Color 2L,Detergents,46.5,32.2,26.5,2023-01-15,false
+P033,Detergente Bebe 1L,Detergents,47.0,32.1,25.9,2023-01-15,false
+P034,Fideos Integral,Pasta,56.5,41.4,36.8,2023-01-15,false
+P035,Fideos Caracol,Pasta,51.2,37.7,33.0,2023-01-15,false
+P036,Galletas Festival,Cookies,30.6,24.4,19.3,2023-01-15,false
+P037,Galletas Wafer,Cookies,29.4,21.3,18.9,2023-01-15,true
+P038,Galletas Premium,Cookies,28.0,24.9,17.4,2023-01-15,false
+P039,Aceite Mixto 1L,Oils,33.8,19.2,18.6,2023-01-15,false
+P040,Blanqueador 1L,Detergents,43.4,32.2,31.8,2023-01-15,false
+P041,Detergents Generico 42,Detergents,45.2,32.6,30.1,2023-01-15,false
+P042,Fideos Tornillo,Pasta,55.9,41.2,36.4,2023-01-15,false
+P043,Cookies Generico 44,Cookies,31.5,23.2,20.4,2023-01-15,true
+P044,Cookies Generico 45,Cookies,28.1,23.9,17.0,2023-01-15,false
+P045,Galletas Coco,Biscuits,39.3,30.1,23.7,2023-01-15,false

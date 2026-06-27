@@ -1,7 +1,6 @@
 with source as (
     select * from {{ ref('itemfile') }}
 ),
-
 renamed as (
     select
         product_id,
@@ -10,9 +9,9 @@ renamed as (
         itemfile_height_cm,
         itemfile_width_cm,
         itemfile_depth_cm,
+        is_pre_sliced,
         itemfile_height_cm * itemfile_width_cm * itemfile_depth_cm as itemfile_volume_cm3,
         created_date
     from source
 )
-
 select * from renamed

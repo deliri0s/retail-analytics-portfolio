@@ -4,7 +4,7 @@ modulares as (select * from {{ ref('stg_modulares') }}),
 
 joined as (
     select
-        i.product_id, i.product_name, i.category, s.supplier_name,
+        i.product_id, i.product_name, i.category, i.is_pre_sliced, s.supplier_name,
         m.store_id, m.shelf_id, m.measurement_date, m.is_pilot_store,
         m.shelf_capacity_units,
         s.declared_height_cm, s.declared_width_cm, s.declared_depth_cm, s.declared_volume_cm3,
